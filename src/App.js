@@ -9,6 +9,7 @@ const App = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  //sending data in to back end
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -22,6 +23,7 @@ const App = () => {
     }
   };
 
+  // getting data from back end
   const fetchUsers = async () => {
     try {
       const response = await axios.get("https://jsonplaceholder.typicode.com/users");
